@@ -1,0 +1,177 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2c63ca
+}
+
+a:hover{ 
+  text-decoration: underline;
+}
+
+img {
+  border: 2px solid #555;
+}
+
+#search_button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#search_button:hover {
+  background-color: darkred;
+}
+
+#header.newsfeed {
+  text-align: center;
+}
+
+div.newsfeed, div.newsfeed > * {
+  margin-left:10px;
+  margin-right:10px;
+}
+
+#news {
+  font-family:'Times New Roman', Times, serif;
+}
+
+.news_entry_body{
+  background-color: lightgrey;
+}
+
+.newsfeed_time {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#pageindex {
+  text-align: center;
+}
+
+div#pageindex, div#pageindex > * {
+  margin-left:8px;
+  margin-right:8px;
+}
+
+#header.news_entry {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#header_entry_elements {
+  font-family:'Times New Roman', Times, serif;
+}
+
+#content {
+  font-family:'Times New Roman', Times, serif;
+  margin-bottom: 50px;
+}
+
+#news_entry_time {
+  color: red;
+  font-weight: bold;
+}
+
+#comments {
+  position:relative;
+}
+
+.each_comment {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  position:relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+#postComment {
+  margin-top: 10px;
+  text-align:center;
+}
+
+#comment_field {
+  width: 300px;
+}
+
+#post_button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#post_button:hover {
+  background-color: darkred;
+}
+
+div#postComment, div#postComment > * {
+  margin-left:8px;
+  margin-right:8px;
+}
+
+#body {
+  text-align:center;
+}
+
+div#body, div#body > * , div#body > * > *{
+  margin-bottom:10px;
+}
+
+#submit_button {
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#submit_button:hover {
+  background-color: darkblue;
+}
+
+div#pageindex, div#pageindex > *{
+  color:black;
+}
+
+
+/* Media queries for the newsfeed page */
+@media only screen and (max-width: 575px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+  }
+  #header * {
+    margin: 2px;
+  }
+  #header input {
+    margin-bottom: 4px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #pageindex a,
+  #pageindex h4 {
+    text-decoration: none;
+    color: #fff;
+    transition: ease-in-out 0.2s;
+    margin: 5px;
+  }
+}

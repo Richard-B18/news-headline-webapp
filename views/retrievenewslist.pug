@@ -1,0 +1,14 @@
+html
+    head 
+        meta(charset="utf-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Assignment 1
+        link(rel="stylesheet", href="stylesheets/style.css")
+        script(src="javascripts/script.js")
+    body(onload="loadNewsList(1)")
+        div(id="header" class="newsfeed")
+            input(id="search_input" type="text" class="header_elements")
+            button(onclick='loadNewsList(1)' id="search_button" class="header_elements") Search news headlines
+            a(href='login?newsID=0' class="header_elements") login
+        div(id="news")
+        div(id="pageindex")

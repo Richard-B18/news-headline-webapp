@@ -1,0 +1,31 @@
+html
+    head 
+        meta(charset="utf-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Assignment 1
+        link(rel="stylesheet", href="stylesheets/style.css")
+        script(src="javascripts/script.js")
+    body(class="news_entry_body")
+        div(id="header" class ="news_entry")
+            a(href="/")
+                button() &#8592;
+            div
+                h1= news.headline
+                h3(id="news_entry_time")= news.time.toLocaleString()
+        div(id="content")
+            p(id="content_child")= news.content
+            p(id="hiddenNewsID" style="display:none")= news._id
+        div(id="comments")
+            each comment, index in comments
+                div(class="each_comment")
+                    div
+                        img(src = comment.icon height="80" width="80" alt="Picture of "+comment.name)
+                        p= comment.name + ","
+                        p(id= (index === 0) ? "latest_comment_time" : null)= comment.time.toLocaleString()
+                        p= comment.comment
+                    
+        div(id="postComment")
+            |Leave a comment :  
+            input(id="comment_field" type="text" placeholder="Comment..." disabled=!login_status)
+            a(href= login_status ? "#" : "/login?newsID="+news._id)
+                button(id="post_button" onclick= login_status ? "postComment()" : null)= login_status ? "Post Comment" : "log in to comment"
